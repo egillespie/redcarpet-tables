@@ -2,5 +2,7 @@
 layout: default
 ---
 
-{% include test.md %}
-{{ markdownify }}
+{% capture test_content %}
+    {% include test.md %}
+{% endcapture %}
+{{ test_content | markdownify }}
